@@ -8,6 +8,14 @@ Abre `index.html` en un navegador moderno. Arrastra una imagen o selecciónala, 
 
 Todo el procesamiento se realiza localmente en el navegador; no se necesita instalación ni backend.
 
+## Cómo se eligen los colores
+
+- Se agrupan los píxeles en el espacio de color Lab (más cercano a cómo percibimos el color) y se devuelven colores que realmente existen en la imagen, no mezclas.
+- Se ignoran los bordes suavizados entre zonas, que generan colores falsos.
+- Los colores casi idénticos se fusionan: si la imagen solo tiene 3 colores distintos, verás 3 y no 5 repetidos.
+- Los degradados suaves se detectan aparte y la paleta se reparte de un extremo al otro.
+- El archivo `.ASE` (Adobe Swatch Exchange) abre en Photoshop, Illustrator, InDesign y Affinity.
+
 ## Despliegue en Cloudflare Pages
 
 El proyecto no requiere un paso de compilación. El archivo `wrangler.toml` configura el directorio raíz como salida estática de Pages.
