@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "image-to-palette",
+  "compatibility_date": "2026-11-06",
+  // Sitio estático de un solo archivo: no necesita build.
+  "assets": {
+    "directory": "./public"
+  },
+  "observability": {
+    "logs": { "enabled": true, "invocation_logs": true, "persist": true }
+  }
+}

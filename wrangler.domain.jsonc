@@ -1,0 +1,16 @@
+{
+  // Configuración para cuando hetor.dev ya esté en tu cuenta de Cloudflare.
+  // Sin build command. Deploy command: npx wrangler deploy -c wrangler.domain.jsonc
+  "name": "image-to-palette",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": "./public",
+    // Los archivos quedan en la raíz de public; Cloudflare los sirve bajo /tools/palette
+    "base_path": "/tools/palette"
+  },
+  // Ruta con prioridad sobre el Custom Domain de hetor.dev (que atiende el Worker "hetor").
+  "routes": [{ "pattern": "hetor.dev/tools/palette*", "zone_name": "hetor.dev" }],
+  "observability": {
+    "logs": { "enabled": true, "invocation_logs": true, "persist": true }
+  }
+}
