@@ -1,0 +1,13 @@
+{
+  "name": "image-to-palette",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Matiz: paletas de color a partir de una imagen. Sitio estático de un solo archivo (public/index.html).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  }
+}
